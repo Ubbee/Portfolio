@@ -1,21 +1,17 @@
-:root {
-    --font-family: 'Arial', sans-serif;
-}
-
 body {
-    font-family: var(--font-family);
-    background-color: #f9f9f9;
+    font-family: inter;
     margin: 0;
     padding: 0;
+
 }
 
 .formulario {
-    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 750px;
     padding: 20px;
+    margin-left: 700px;
 }
 
 .formuT {
@@ -24,12 +20,23 @@ body {
     width: 100%;
     max-width: 600px;
     padding: 25px;
-    border: 1px solid rgb(187, 187, 187);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    background: linear-gradient(to bottom right, #ffffff, #e6e6e6);
+    opacity: 1;
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.formuT:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-top: 0.2px solid #223357;
+}
+.formuT:hover .formu input,
+.formuT:hover .formu textarea{
+    background-color: #091736;
+}
+
 
 .titulo {
     margin-bottom: 40px;
@@ -72,6 +79,9 @@ body {
     font-size: 1rem;
     width: 100%;
     transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #1F2937;
+    border: 1px solid #1F2937;
+    color: white;
 }
 
 .nomYap div input:focus,
@@ -79,6 +89,7 @@ body {
     border-color: var(--primary-color);
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
+    color: white;
 }
 
 .mail {
@@ -90,7 +101,6 @@ body {
 
 .mail label,
 .msj label {
-    color: #6c757d;
     margin-right: 10px;
 }
 
@@ -100,18 +110,21 @@ body {
     border: 1px solid rgb(187, 187, 187);
     font-family: var(--font-family);
     padding: 5px;
+    background-color: #1F2937;
+    border: 1px solid #1F2937;
+    color: white;
 }
 
 .msj textarea {
-    width: 90%;
+    width: 102%;
     height: 60px;
     font-size: 1rem;
 }
 
 .mail input {
     padding: 5px;
-    width: 88%;
     font-size: 1rem;
+    width: 100%;
 }
 
 .msj {
@@ -122,19 +135,28 @@ body {
 
 button {
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: #1F2937;
+    color: #20B2AA;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
     font-size: 1.2rem;
+    margin-top: 15px;
 }
 
 button:hover {
-    background-color: #0067d4;
+    background-color: #136360;
+    color: #ffffff;
     transform: scale(1.02);
     transition: 0.2s;
+}
+
+@media only screen and (max-width: 1120px) {
+    .formulario{
+        margin: 0;
+        margin-top: -70px;
+    }
 }
 
 @media (min-width: 600px) {

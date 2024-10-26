@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+    margin: 0;
+    /* Evitar el scroll */
+    background-color: #282c34;
+    /* Fondo oscuro para resaltar el efecto */
+}
+
+.cursor {
+    position: fixed;
+    width: 1000px;/* Tamaño del cursor */
+    height: 1000px;/* Tamaño del cursor */
+    border-radius: 50%;
+    pointer-events: none;/* Ignorar el cursor */
+    transition: transform 0.2s ease;/* Transiciones suaves */
+    background: radial-gradient(circle, rgba(22, 94, 219, 0.2) 0%, rgba(255, 255, 255, 0) 70%);/* Degrades radial */
+    transform: translate(-50%, -50%); /* Centrar el cursor */
+}
+

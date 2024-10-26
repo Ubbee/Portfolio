@@ -1,238 +1,263 @@
-.sectorr {
-    background-color: #0B1215;
+.home {
+    max-width: 40%;
+    margin-left: 57%;
+    margin-top: 150px;
+    padding-right: 80px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #7F94BA;
+    transform: translateY(-20px);
+}
+.sectorr div h1{
+    margin-bottom: 150px;
 }
 
-section .home {
-    background-image: linear-gradient(to bottom, #0B1215, rgba(0, 0, 0, 0.5), #0B1215), url("https://images.unsplash.com/photo-1562758778-9f5ba22c8bae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyMnx8Q29tcHV0ZXIlMjBSZXBhaXJ8ZW58MHx8fHwxNzA2ODIyNTkzfDA&ixlib=rb-4.0.3&q=80&w=1080&quot");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: clamp(50px, 10vw, 260px);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    color: white;
-    height: calc(100vh - 115px);
-    width: 100vw;
-    margin-top: 100px;
+@media only screen and (max-width: 1120px) {
+    .home {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 90%;
+    }
 }
 
-.home h1 {
-    font-size: 3.5vw;
-    width: 50%;
+@media only screen and (max-width: 800px) {
+    .home {
+        padding-right: 10px;
+    }
 }
-
-.home p {
-    font-size: clamp(1rem, 1.4vw, 1.6rem);
-    font-weight: 1;
-    width: 70%;
-}
-
-.home button {
-    margin-top: 20px;
-    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-    background-color: rgba(0, 0, 0, 0);
-    border: 3px solid;
-    padding: 10px 20px;
-    border-radius: 6px;
-    color: white;
-    cursor: pointer;
-    width: 50%;
-    max-width: 200px;
-}
-
-.home button:hover {
-    background-color: rgba(167, 167, 167, 0.2);
-    transform: translateY(1px);
-    border: 3px solid orange;
-    color: orange;
-    transition: 0.1s;
-}
-
-
 
 /* ------------------------SERVICIOS----------------------- */
 
 .stitulo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    background: linear-gradient(to bottom, #0B1215 1%, #FFFFFF 10%);
-    padding: 50px 0px 140px 0px;
+    max-width: 43%;
+    margin-left: 55.2%;
+    transform: translateY(-47px);
 }
 
-.servicios {
+.exp {
     display: flex;
+    padding: 25px 35px;
+    border-radius: 5px;
+    color: #7F94BA;
+    text-decoration: none;
+    width: 90%;
+    font-weight: 450;
+    margin-top: 150px;
+}
+
+.exp:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: 0.2s;
+}
+
+.exp div h4 {
+    font-size: 1.2rem;
+    color: rgb(202, 202, 202);
+}
+
+.exp div {
+    margin-left: 20px;
+}
+
+.exp:hover div h4 {
+    color: #53CED0;
+    transition: 0.2s;
+}
+
+
+.fecha {
+    position: relative;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    color: #64748B;
+    height: 25px;
+    transform: translateY(3px);
+    font-weight: 700;
+}
+
+.fecha::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 1px;
+    width: 0;
+    background-color: #53CED0;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.exp:hover .fecha::after {
+    width: 90%;
+    left: 0;
+    transform: translateX(7px);
+}
+
+/* --------------TECNOLOGIAS-------------- */
+.tecnologias {
+    display: flex;
+    justify-content: start;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
 }
 
-.stitulo h3 {
-    text-align: center;
-    font-size: clamp(2rem, 3vw, 3rem);
-    padding-top: clamp(5%, 10vh, 200px);
+.tecnologias .tec {
+    background-color: #122B39;
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #46AFA4;
+    font-weight: 600;
+    margin: 5px 5px;
+    transform: translateX(-7px) translateY(10px);
 }
 
-.servicios div {
-    width: 30%;
-    margin-top: 70px;
-    flex-direction: column;
-    box-shadow: 4px 6px 12px 1px rgba(0, 0, 0, 0.75);
-    padding: 15px 25px;
-    border-radius: 5px;
-    border: 0.1px solid rgb(230, 230, 230);
+.stitulo .tecnologias .tec {
+    transform: translateX(-26px) translateY(10px);
 }
 
-
-
-.servicios div:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-
-/* ---------------------------SOBRE-NOSOTROS------------------------------- */
-
-.nosotros {
-    height: 500px;
-    color: white;
-    display: flex;
-    margin-top: 5vh;
-    padding: 3vh 3vw;
-}
-
-.nosotros .mapa {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    transform: translateY(70px) translateX(-20px);
-}
-
-.mapa h6 {
-    z-index: 1;
-    text-align: center;
-    transform: translateY(-85px);
-    font-size: clamp(1.6rem, 2.1vw, 2.1rem);
-    ;
-    font-weight: 100;
-}
-
-
-.nosotros .nos {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-    height: 130%;
-    background-color: #242424;
-    padding: 2vh 2vw;
-    border-radius: 5px;
-    box-shadow: 6px 9px 12px 2px rgba(0, 0, 0, 0.75);
-
-}
-
-.nosotros .nos h2 {
-    font-size: clamp(2rem, 4vw, 3.6rem);
-    text-align: center;
-    transform: translateY(-10vh);
-    padding-bottom: 15px;
-    transform: translateY(0px);
-}
-
-.nosotros .nos p {
-    font-size: clamp(1rem, 1.4vw, 1.6rem);
-    font-weight: 100;
-    text-align: center;
-}
-
-/* ------------------------FORMULARIO------------------------------- */
-
-
-@media only screen and (max-width: 1200px) {
-    .nosotros {
-        flex-direction: column;
-        align-items: center;
-        height: 900px;
-    }
-
-    .nosotros .nos {
-        transform: translateY(20px);
-        width: 70%;
-    }
-
-    .nosotros .mapa {
-        order: 2;
+@media only screen and (max-width: 1120px) {
+    .stitulo {
         margin: 0 auto;
-        margin-top: 140px;
-        transform: translateX(0px);
+        margin-top: 130px;
+        transform: translateX(14px);
+        max-width: 88.3%;
     }
 
-    .nosotros p {
-        text-align: center;
+    .exp {
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
     }
 
-    .mapa h6 {
-        transform: translateY(-80px);
+    .exp:hover {
+        background-color: rgba(0, 0, 0, 0);
+        border-top: 0;
     }
 
-    .home h1 {
-        width: 85%;
-        margin-bottom: 10px;
+    .exp .fecha {
+        margin-right: 80px;
+        transform: translateX(-24px);
+        top: 1px;
     }
-
-    .home p {
-        width: 95%;
-    }
-
-
-    .stitulo {
-        padding: 50px 0px 50px 0px;
-    }
-
-    .servicios {
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        margin: 25px 50px;
-    }
-
-
-    .servicios div {
-        width: 45%;
-        margin: 10px;
-    }
-
-    .servicios div h4 {
-        font-size: 20px;
-    }
-
-    .servicios div p {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-
 }
 
-@media only screen and (max-width: 620px) {
-    .stitulo {
-        background: linear-gradient(to bottom, #0B1215 1%, #FFFFFF 3%);
+@media only screen and (max-width: 650px) {
+    .exp{
+        flex-direction: column;
+    }
+    .exp h4{
+        transform: translateX(-38px);
+        margin-bottom: 5px;
+    }
+    .exp .fecha{
+        transform: translateX(-18px);
+        width: 23%;
+    }
+    .fecha::after{
+        top: 21px;
     }
 
-    .home h1 {
-        font-size: 6vw;
+    .exp p{
+        transform: translateX(-38px);
+    }
+    .exp .tecnologias{
+        transform: translateX(-37px);
+    }
+}
+
+/* -----------------------PROYECTOS---------------------------------- */
+
+.proyectos {
+    display: flex;
+    padding: 25px 35px;
+    border-radius: 5px;
+    color: #7F94BA;
+    text-decoration: none;
+    width: 40%;
+    font-weight: 450;
+    margin-top: 30px;
+    margin-left: 55.2%;
+    transform: translateY(-40px);
+}
+#idd{
+    margin-top: 150px;
+}
+
+.proyectos:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: 0.2s;
+}
+
+.proyectos img {
+    width: 160px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 5px;
+    transform: translateY(6px);
+}
+
+.proyectos h5 {
+    color: rgb(194, 194, 194);
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+
+.proyectos:hover h5 {
+    color: #53CED0;
+    transition: 0.2s;
+}
+
+.proyectos p {
+    font-size: 1rem;
+    color: #7F94BA;
+}
+
+.titles {
+    margin-left: 57.1%;
+    transform: translateY(95px);
+    font-weight: 700;
+    color: #CBD6EA;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 1120px) {
+
+    .proyectos div {
+        width: 110%;
     }
 
-    .servicios div {
-        width: 75%;
-        margin: 10px;
+    .titles {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .proyectos {
+        margin-left: 17px;
+        width: 97.2%;
     }
 
-    .nosotros {
-        height: 1000px;
+    .proyectos:hover {
+        background-color: rgba(0, 0, 0, 0);
+        border-top: 0px solid rgba(0, 0, 0, 0);
+        transition: 0.2s;
+    }
+
+    .proyectos:hover img {
+        border: 1px solid #31353d;
+    }
+
+    .proyectos img {
+        width: 200px;
+        height: 120px;
+        margin-right: 40px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .proyectos{
+        flex-direction: column;
+        width: 90%;
+        transform: translateX(-20px);
+        flex-direction: column-reverse;
+    }
+    .proyectos img{
+        margin-top: 20px;
     }
 }

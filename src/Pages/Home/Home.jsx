@@ -1,13 +1,10 @@
 import styles from './home.module.css';
-import { Mapa } from '../../Components/Mapa/Mapa.jsx';
 import React, { useEffect, useState } from 'react';
 import { Formulario } from '../../Components/Formulario/Formulario.jsx';
-import { Wsp } from '../../Components/Wsp/Wsp.jsx';
-import { Nav } from '../../Components/Layout/Nav/Nav.jsx';
 
 export const Home = () => {
 
-  const [position, setPosition] = useState([-32.882804, -68.860328]);
+  const [position, setPosition] = useState(null);
   const address = 'Boulogne Sur Mer y Uruguay, Capital, Mendoza, Argentina';
 
   useEffect(() => {
@@ -18,15 +15,14 @@ export const Home = () => {
         if (data.length > 0) {
           setPosition([data[0].lat, data[0].lon]);
         } else {
-          console.error('No se encontraron coordenadas para la dirección proporcionada.');
+          console.warn('No se encontraron coordenadas para la dirección proporcionada.');
         }
       } catch (error) {
-        console.error('Error al obtener coordenadas:', error);
+        console.error('Error al obtener coordenadas:', error.message);
       }
     };
-
     fetchCoordinates();
-  }, []);
+  }, [address]);
 
   const scrollToFormulario = () => {
     const sectionElement = document.getElementById('formu');
@@ -38,86 +34,118 @@ export const Home = () => {
   return (
     <>
       <section className={styles.sectorr}>
-        <div className={styles.home} id='inicio'>
-          <h1>Redes y Soluciones Tecnológicas Integradas</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Id molestiae maxime ipsum, culpa, sed error quas fuga voluptates blanditiis nulla,
-            harum tempora inventore. Veritatis totam, tempore qui nemo pariatur blanditiis.</p>
-          <button onClick={scrollToFormulario}>Contactanos</button>
+        {/* -------------------------HOME------------------------- */}
+        <span id='yo'></span>
+        <div>
+          <h1 className={styles.titles}>SOBRE MI</h1>
         </div>
-        <div className={styles.stitulo}>
-          <h3>Nuestros Servicios</h3>
-          <div className={styles.servicios}>
-            <div>
-              <h4>Servicio 1</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ipsum adipisci accusantium magnam. Atque inventore
-                voluptatibus tempore veritatis. Numquam provident minima nisi
-                odio repellat officiis voluptate amet eaque, reiciendis rem.</p>
-            </div>
-            <div>
-              <h4>Servicio 2</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ipsum adipisci accusantium magnam. Atque inventore
-                voluptatibus tempore veritatis. Numquam provident minima nisi
-                odio repellat officiis voluptate amet eaque, reiciendis rem.</p>
-            </div>
-            <div>
-              <h4>Servicio 3</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ipsum adipisci accusantium magnam. Atque inventore
-                voluptatibus tempore veritatis. Numquam provident minima nisi
-                odio repellat officiis voluptate amet eaque, reiciendis rem.</p>
-            </div>
+        <p className={styles.home} >Comencé mi aventura en el desarrollo
+          web creando interfaces dinámicas y reactivas, buscando siempre ofrecer
+          experiencias fluidas en cualquier dispositivo. Desde entonces, he tenido
+          la oportunidad de contribuir a diversos proyectos{/*}, desde pequeñas landing
+          pages hasta aplicaciones más complejas*/}. <br /> Me enfoco en crear sitios web que
+          no solo se vean bien, sino que también estén optimizados bajo el capó,
+          ahorrando código para mejorar el rendimiento y la mantenibilidad.
+          <br /><br />
+          Actualmente, mi prioridad es diseñar y construir interfaces web reactivas,
+          centradas en la eficiencia y en la experiencia del usuario. Cuando no
+          estoy escribiendo código, me gusta explorar nuevas técnicas de desarrollo,
+          leer sobre tendencias tecnológicas y disfrutar de tiempo de calidad con
+          mis seres queridos</p>
 
-            <div >
-              <h4>Servicio 4</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ipsum adipisci accusantium magnam. Atque inventore
-                voluptatibus tempore veritatis. Numquam provident minima nisi
-                odio repellat officiis voluptate amet eaque, reiciendis rem.</p>
-            </div>
+
+        {/* ----------------------SERVICIOS---------------------- */}
+        <h2 className={styles.titles}>EXPERIENCIA</h2>
+        <div className={styles.stitulo}>
+          <a href="#" className={styles.exp} >
+            <p className={styles.fecha}>2024 -- PRESENT</p>
             <div>
-              <h4>Servicio 5</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ipsum adipisci accusantium magnam. Atque inventore
-                voluptatibus tempore veritatis. Numquam provident minima nisi
-                odio repellat officiis voluptate amet eaque, reiciendis rem.</p>
+              <h4>Front-End Developer - Freelance</h4>
+              <p id='proyecto'>Creación y mantenimiento de páginas web altamente reactivas, garantizando una experiencia
+                de usuario fluida en dispositivos de diferente tamaño. Priorizo la eficiencia del
+                código, optimizando su estructura para reducir redundancias y mejorar el
+                rendimiento general del sitio, logrando soluciones limpias y escalables</p>
+              <div className={styles.tecnologias}>
+                <p className={styles.tec}>JavaScript</p>
+                <p className={styles.tec}>React js</p>
+                <p className={styles.tec}>HTML5</p>
+                <p className={styles.tec}>CSS 3</p>
+              </div>
             </div>
-            <div>
-              <h4>Servicio 6</h4>
-              <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ipsum adipisci accusantium magnam. Atque inventore
-                voluptatibus tempore veritatis. Numquam provident minima nisi
-                odio repellat officiis voluptate amet eaque, reiciendis rem.</p>
-            </div>
-          </div>
-          <span id='nosotros'></span>
+          </a>
         </div >
 
-        <section >
-          <div className={styles.nosotros} >
-            <div className={styles.mapa} >
-              <h6>Ubicación</h6>
-              <Mapa position={position} />
-            </div>
-            <div className={styles.nos}>
-              <h2>Quienes Somos?</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Id molestiae maxime ipsum, culpa, sed error quas fuga voluptates blanditiis nulla,
-                harum tempora inventore. Veritatis totam, tempore qui nemo pariatur blanditiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Id molestiae maxime ipsum, culpa, sed error quas fuga voluptates blanditiis nulla,
-                harum tempora inventore. Veritatis totam, tempore qui nemo pariatur blanditiis.</p>
+        {/* --------------------------SOLUCIONES-GLOBALES------------------------------- */}
+        <h3 className={styles.titles}>PROYECTOS</h3>
+
+        <a href="https://solucionesglobales.netlify.app" target="_blank" className={styles.proyectos} id={styles.idd}>
+          <img src="src/Pages/Home/img/captura Soluciones.png" alt="" />
+          <div>
+            <h5>Soluciones Globales - WEB</h5>
+            <p>Desarrollé una Landing Page responsive diseñada para proporcionar
+              a los clientes toda la información necesaria sobre la empresa de
+              manera clara y accesible. El objetivo principal fue optimizar
+              los tiempos y mejorar la eficiencia en el proceso de contacto,
+              asegurando que los usuarios puedan encontrar rápidamente lo
+              que necesitan desde cualquier dispositivo.</p>
+            <div className={styles.tecnologias}>
+              <p className={styles.tec}>JavaScript</p>
+              <p className={styles.tec}>React js</p>
+              <p className={styles.tec}>HTML5</p>
+              <p className={styles.tec}>CSS 3</p>
             </div>
           </div>
-        </section>
+        </a>
+        {/* --------------------------CODERHOUSE------------------------------- */}
+        <a href="https://ubbee.github.io/PF-Curotto/" target="_blank" className={styles.proyectos}>
+          <img src="src/Pages/Home/img/coderPic.png" alt="" />
+          <div>
+            <h5>CoderHouse - PROYECTO 1</h5>
+            <p>Desarrollé una plataforma web inspirada en el diseño de Coderhouse,
+              enfocada en mejorar la experiencia de los estudiantes al acceder a
+              los cursos y materiales educativos de manera eficiente. Implementé
+              un diseño responsive para asegurar que los usuarios puedan navegar
+              de forma intuitiva desde cualquier dispositivo. El objetivo principal
+              fue crear una interfaz clara y atractiva, utilizando SCSS para mejorar
+              la organización del código y optimizando la carga del sitio con
+              JavaScript, mejorando la accesibilidad y la experiencia del usuario.</p>
+            <div className={styles.tecnologias}>
+              <p className={styles.tec}>JavaScript</p>
+              <p className={styles.tec}>React js</p>
+              <p className={styles.tec}>HTML5</p>
+              <p className={styles.tec}>CSS 3</p>
+            </div>
+          </div>
+        </a>
+
+        {/* --------------------------ECOMMERCE------------------------------- */}
+        <a href="https://ubbee.github.io/BikeShop/" target="_blank" className={styles.proyectos}>
+          <img src="src/Pages/Home/img/EcomerccePic.png" alt="" />
+          <div>
+            <h5>CoderHouse - Eccomerce - PROYECTO 2</h5>
+            <p>Desarrollé una Landing Page responsive diseñada para proporcionar
+              a los clientes toda la información necesaria sobre la empresa de
+              manera clara y accesible. El objetivo principal fue optimizar
+              los tiempos y mejorar la eficiencia en el proceso de contacto,
+              asegurando que los usuarios puedan encontrar rápidamente lo
+              que necesitan desde cualquier dispositivo.</p>
+            <div className={styles.tecnologias}>
+              <p className={styles.tec}>JavaScript</p>
+              <p className={styles.tec}>React js</p>
+              <p className={styles.tec}>HTML5</p>
+              <p className={styles.tec}>CSS 3</p>
+            </div>
+          </div>
+        </a>
+
+        {/* --------------------------------------------------------- */}
+
 
         <Formulario />
-        <Wsp />
 
       </section>
     </>
   )
 }
+
 

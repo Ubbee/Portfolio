@@ -46,8 +46,8 @@ export const Formulario = () => {
         (<div className={styles.formulario} id='formu'>
             <section className={styles.formuT} >
                 <div className={styles.titulo}>
-                    <h5>Contactanos</h5>
-                    <p>Llená el formulario y nos pondremos en contacto con vos a la brevedad.</p>
+                    <h5>Contacto</h5>
+                    <p>Llená el formulario y me pondré en contacto con vos a la brevedad.</p>
                 </div>
                 <div>
                     <form className={styles.formu} onSubmit={handleSubmit}>

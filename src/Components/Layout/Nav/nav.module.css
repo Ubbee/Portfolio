@@ -1,133 +1,104 @@
 .nav {
-    background-color: #0B1215;
     display: flex;
-    color: white;
-    font-family: "Libre Franklin", sans-serif;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    transform: translateY(-100px);
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-
-.nav .uul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin-right: 50px;
-}
-
-.nav .uul li {
-    position: relative;
-}
-
-.nav li:hover a {
-    color: #c5c5c5;
-    transition: 0.1s;
-    transform: translateY(2px);
-    
-}
-
-.nav .uul li a {
-    white-space: nowrap;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: #fff;
+    position: fixed;
+    height: 100%;
+    transform: translateX(70px);
 }
 
 .nav .tit {
-    text-decoration: none;
     color: white;
-    font-size: 2.5rem;
-    margin: 10px 0px 10px 35px;
+    text-decoration: none;
+    font-size: 3.3rem;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
-.nav .lii::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    visibility: hidden;
-    transition: all 0.2s ease-in-out 0s;
+.nav p {
+    color: #7F94BA;
+    font-size: 1rem;
+    font-weight: 450;
+    margin-left: 50px;
+    max-width: 500px;
+    transform: translateY(-140px);
 }
 
-.nav .lii:hover:before {
-    visibility: visible;
+.nav h1 {
+    color: white;
+    font-weight: 450;
+    margin-left: 50px;
+    transform: translateY(-80px);
+}
+
+
+
+.nav .uul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+    padding-left: 30px;
+    transform: translateY(-140px);
+}
+
+.nav .uul li a {
+    padding: 15px 20px;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 510;
+    text-decoration: none;
+    color: #7F94BA;
+}
+
+.nav .uul li a:hover {
+    transform: scale(1.05) translateX(7px);
+    color: white;
+
+    transition: 0.2s;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
     width: 100%;
+    padding: 20px;
+    transform: translateY(-130px) translateX(20px);
 }
 
-/* --------------------BURGUER-------------------- */
-.burguer {
-    position: relative;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-    display: none;
+.social a {
+    color: #3C4C71;
+    margin: 0px 3px;
 }
 
-.burguer .lista {
-    display: none;
-    width: 120px;
-    height: 150px;
-    list-style-type: none;
-    box-shadow: 2px 5px 20px 3px black;
-    background-color: #0B1215;
+.social a:hover {
+    color: #C5D1ED;
+    transition: 0.4s;
 }
 
-.lista li:hover{
-    background-color: #0f191d;
-}
-.lista li a{
-    color: white;
-    text-decoration: none;
-}
-.lista li:hover a{
-    color: orange;
-}
-
-.burguer:hover .lista {
-    display: block;
-    transform: translateY(30px);
-}
-
-.burguer img {
-    width: 31px;
-    height: 31px;
-    transform: translateX(97px) translateY(10px);
-}
-
-@media only screen and (max-width: 700px) {
-
-    .uul {
-        visibility: hidden;
-        position: absolute;
+@media only screen and (max-width: 1120px) {
+    .nav {
+        width: 50%;
+        height: 20%;
+        position: relative;
+        transform: translateY(0px) translateX(0px);
     }
 
-    .burguer{
-        display: flex;
+    .nav .uul li a {
+        padding: 10px;
     }
 
-    .burguer img {
-        display: block;
-        cursor: pointer;
-        transform: translateX(120px) translateY(10px);
+    .nav .uul {
+        display: none;
     }
 
-    .lista{
-        margin-top: 20px;
-       margin-left: 20px; 
+    .nav p,
+    .nav h1 {
+        margin-top: 80px;
     }
 
+    .nav .social {
+        margin-left: 10px;
+    }
 }
