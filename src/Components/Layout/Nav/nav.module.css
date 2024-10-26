@@ -79,7 +79,7 @@
 
 @media only screen and (max-width: 1120px) {
     .nav {
-        width: 50%;
+        width: 100%;
         height: 20%;
         position: relative;
         transform: translateY(0px) translateX(0px);

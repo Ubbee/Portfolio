@@ -1,6 +1,9 @@
 import styles from './home.module.css';
 import React, { useEffect, useState } from 'react';
 import { Formulario } from '../../Components/Formulario/Formulario.jsx';
+import tiendaBike from './img/EcomerccePic.png';
+import coderReplica from './img/coderPic.png';
+import SolucionesGlobales from './img/captura Soluciones.png';
 
 export const Home = () => {
 
@@ -79,7 +82,7 @@ export const Home = () => {
         <h3 className={styles.titles}>PROYECTOS</h3>
 
         <a href="https://solucionesglobales.netlify.app" target="_blank" className={styles.proyectos} id={styles.idd}>
-          <img src="src/Pages/Home/img/captura Soluciones.png" alt="" />
+          <img src={SolucionesGlobales} alt="captura de la web de Soluciones Globales" />
           <div>
             <h5>Soluciones Globales - WEB</h5>
             <p>Desarrollé una Landing Page responsive diseñada para proporcionar
@@ -98,7 +101,7 @@ export const Home = () => {
         </a>
         {/* --------------------------CODERHOUSE------------------------------- */}
         <a href="https://ubbee.github.io/PF-Curotto/" target="_blank" className={styles.proyectos}>
-          <img src="src/Pages/Home/img/coderPic.png" alt="" />
+          <img src={coderReplica} alt="captura de la replica de CoderHouse" />
           <div>
             <h5>CoderHouse - PROYECTO 1</h5>
             <p>Desarrollé una plataforma web inspirada en el diseño de Coderhouse,
@@ -120,15 +123,17 @@ export const Home = () => {
 
         {/* --------------------------ECOMMERCE------------------------------- */}
         <a href="https://ubbee.github.io/BikeShop/" target="_blank" className={styles.proyectos}>
-          <img src="src/Pages/Home/img/EcomerccePic.png" alt="" />
+          <img src={tiendaBike} alt="captura de la tienda BikeShop" />
           <div>
             <h5>CoderHouse - Eccomerce - PROYECTO 2</h5>
-            <p>Desarrollé una Landing Page responsive diseñada para proporcionar
-              a los clientes toda la información necesaria sobre la empresa de
-              manera clara y accesible. El objetivo principal fue optimizar
-              los tiempos y mejorar la eficiencia en el proceso de contacto,
-              asegurando que los usuarios puedan encontrar rápidamente lo
-              que necesitan desde cualquier dispositivo.</p>
+            <p>Desarrollé una tienda de bicicletas sencilla utilizando JavaScript,
+              enfocándome en ofrecer a los usuarios una experiencia de compra fluida
+              y accesible. Implementé un diseño limpio y fácil de navegar, permitiendo
+              a los visitantes explorar los productos de manera intuitiva. El objetivo
+              principal fue crear una interfaz atractiva que facilite la visualización
+              y selección de bicicletas, optimizando la carga de la página para
+              mejorar la velocidad y la usabilidad. Utilicé buenas prácticas de
+              programación para asegurar un código eficiente y fácil de mantener.</p>
             <div className={styles.tecnologias}>
               <p className={styles.tec}>JavaScript</p>
               <p className={styles.tec}>React js</p>
