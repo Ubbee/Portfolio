@@ -1,7 +1,7 @@
 import styles from './home.module.css';
 import React, { useEffect, useState } from 'react';
 import { Formulario } from '../../Components/Formulario/Formulario.jsx';
-import tiendaBike from './img/EcomerccePic.png';
+import tiendaBike from './img/gimnasio.png';
 import coderReplica from './img/coderPic.png';
 import SolucionesGlobales from './img/captura Soluciones.png';
 
@@ -121,24 +121,20 @@ export const Home = () => {
           </div>
         </a>
 
-        {/* --------------------------ECOMMERCE------------------------------- */}
-        <a href="https://ubbee.github.io/BikeShop/" target="_blank" className={styles.proyectos}>
-          <img src={tiendaBike} alt="captura de la tienda BikeShop" />
+        {/* --------------------------LANDING-PAGE------------------------------- */}
+        <a href="https://gimnacio01.netlify.app" target="_blank" className={styles.proyectos}>
+          <img src={tiendaBike} alt="captura de la web gimnacio MetaBody" />
           <div>
-            <h5>CoderHouse - Eccomerce - PROYECTO 2</h5>
-            <p>Desarrollé una tienda de bicicletas sencilla utilizando JavaScript,
-              enfocándome en ofrecer a los usuarios una experiencia de compra fluida
-              y accesible. Implementé un diseño limpio y fácil de navegar, permitiendo
-              a los visitantes explorar los productos de manera intuitiva. El objetivo
-              principal fue crear una interfaz atractiva que facilite la visualización
-              y selección de bicicletas, optimizando la carga de la página para
-              mejorar la velocidad y la usabilidad. Utilicé buenas prácticas de
-              programación para asegurar un código eficiente y fácil de mantener.</p>
+            <h5>Proyecto Web - Gimnasio MetaBody</h5>
+            <p>Desarrollé una landing page para un gimnasio, enfocándome en una presentación clara de sus servicios, beneficios y ubicación.
+               El diseño está pensado para ofrecer una navegación fluida y visualmente atractiva, guiando al usuario por secciones bien definidas con llamados a la acción visibles.
+              La estética moderna y limpia ayuda a transmitir profesionalismo, mientras que la estructura responsive asegura una buena experiencia en distintos dispositivos. El proyecto fue desplegado en Netlify, garantizando un acceso rápido y sin complicaciones.</p>
             <div className={styles.tecnologias}>
-              <p className={styles.tec}>JavaScript</p>
-              <p className={styles.tec}>React js</p>
               <p className={styles.tec}>HTML5</p>
               <p className={styles.tec}>CSS 3</p>
+              <p className={styles.tec}>SCSS</p>
+              <p className={styles.tec}>Netlify</p>
+              <p className={styles.tec}>Bootstrap</p>
             </div>
           </div>
         </a>
