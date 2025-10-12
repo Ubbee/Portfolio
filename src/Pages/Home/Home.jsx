@@ -81,21 +81,22 @@ export const Home = () => {
         {/* --------------------------SOLUCIONES-GLOBALES------------------------------- */}
         <h3 className={styles.titles}>PROYECTOS</h3>
 
-        <a href="https://solucionesglobales.netlify.app" target="_blank" className={styles.proyectos} id={styles.idd}>
-          <img src={SolucionesGlobales} alt="captura de la web de Soluciones Globales" />
+        <a href="https://ubbee.github.io/PaginaDelClima/" target="_blank" className={styles.proyectos} id={styles.idd}>
+          <img src={weatherWeb} alt="captura de la web de weather web" />
           <div>
-            <h5>Soluciones Globales - WEB</h5>
-            <p>Desarrollé una Landing Page responsive diseñada para proporcionar
-              a los clientes toda la información necesaria sobre la empresa de
-              manera clara y accesible. El objetivo principal fue optimizar
-              los tiempos y mejorar la eficiencia en el proceso de contacto,
-              asegurando que los usuarios puedan encontrar rápidamente lo
-              que necesitan desde cualquier dispositivo.</p>
+            <h5>Página del clima - LIVE</h5>
+            <p>Desarrollé una aplicación web dinámica que muestra el clima actual, 
+            pronósticos por hora y por semana utilizando la API de Open-Meteo. 
+            El proyecto integra geolocalización en tiempo real para detectar la ubicación 
+            del usuario y actualizar los datos automáticamente. Su diseño responsive 
+            permite una visualización clara y atractiva tanto en dispositivos móviles 
+            como en pantallas grandes, priorizando la accesibilidad y la experiencia del usuario.</p>
             <div className={styles.tecnologias}>
               <p className={styles.tec}>JavaScript</p>
               <p className={styles.tec}>React js</p>
               <p className={styles.tec}>HTML5</p>
               <p className={styles.tec}>CSS 3</p>
+              <p className={styles.tec}>Open Meteo</p>
             </div>
           </div>
         </a>
