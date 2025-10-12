@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Formulario } from '../../Components/Formulario/Formulario.jsx';
 import tiendaBike from './img/gimnasio.png';
 import coderReplica from './img/coderPic.png';
-import SolucionesGlobales from './img/captura Soluciones.png';
+import SolucionesGlobales from './img/weatherWeb.png';
 
 export const Home = () => {
 
