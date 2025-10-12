@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Formulario } from '../../Components/Formulario/Formulario.jsx';
 import tiendaBike from './img/gimnasio.png';
 import coderReplica from './img/coderPic.png';
-import weatherWeb from './img/weatherWeb.png';
+import {weatherWeb} from './img/weatherWeb.png';
 
 export const Home = () => {
 
@@ -78,7 +78,7 @@ export const Home = () => {
           </a>
         </div >
 
-        {/* --------------------------SOLUCIONES-GLOBALES------------------------------- */}
+        {/* --------------------------WEATHER-WEB------------------------------- */}
         <h3 className={styles.titles}>PROYECTOS</h3>
 
         <a href="https://ubbee.github.io/PaginaDelClima/" target="_blank" className={styles.proyectos} id={styles.idd}>
@@ -96,7 +96,7 @@ export const Home = () => {
               <p className={styles.tec}>React js</p>
               <p className={styles.tec}>HTML5</p>
               <p className={styles.tec}>CSS 3</p>
-              <p className={styles.tec}>Open Meteo</p>
+              <p className={styles.tec}>Open Meteo Api</p>
             </div>
           </div>
         </a>
