@@ -1,38 +1,11 @@
 import styles from './home.module.css';
-import React, { useEffect, useState } from 'react';
 import { Formulario } from '../../Components/Formulario/Formulario.jsx';
 import tiendaBike from './img/gimnasio.png';
 import coderReplica from './img/coderPic.png';
-import {weatherWeb} from './img/weatherWeb.png';
+import weatherWeb from './img/weatherWeb.png';
+import calculadoraWeb from './img/calculadoraWeb.png';
 
 export const Home = () => {
-
-  const [position, setPosition] = useState(null);
-  const address = 'Boulogne Sur Mer y Uruguay, Capital, Mendoza, Argentina';
-
-  useEffect(() => {
-    const fetchCoordinates = async () => {
-      try {
-        const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${address}`);
-        const data = await response.json();
-        if (data.length > 0) {
-          setPosition([data[0].lat, data[0].lon]);
-        } else {
-          console.warn('No se encontraron coordenadas para la dirección proporcionada.');
-        }
-      } catch (error) {
-        console.error('Error al obtener coordenadas:', error.message);
-      }
-    };
-    fetchCoordinates();
-  }, [address]);
-
-  const scrollToFormulario = () => {
-    const sectionElement = document.getElementById('formu');
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <>
@@ -85,12 +58,12 @@ export const Home = () => {
           <img src={weatherWeb} alt="captura de la web de weather web" />
           <div>
             <h5>Página del clima - LIVE</h5>
-            <p>Desarrollé una aplicación web dinámica que muestra el clima actual, 
-            pronósticos por hora y por semana utilizando la API de Open-Meteo. 
-            El proyecto integra geolocalización en tiempo real para detectar la ubicación 
-            del usuario y actualizar los datos automáticamente. Su diseño responsive 
-            permite una visualización clara y atractiva tanto en dispositivos móviles 
-            como en pantallas grandes, priorizando la accesibilidad y la experiencia del usuario.</p>
+            <p>Desarrollé una aplicación web dinámica que muestra el clima actual,
+              pronósticos por hora y por semana utilizando la API de Open-Meteo.
+              El proyecto integra geolocalización en tiempo real para detectar la ubicación
+              del usuario y actualizar los datos automáticamente. Su diseño responsive
+              permite una visualización clara y atractiva tanto en dispositivos móviles
+              como en pantallas grandes, priorizando la accesibilidad y la experiencia del usuario.</p>
             <div className={styles.tecnologias}>
               <p className={styles.tec}>JavaScript</p>
               <p className={styles.tec}>React js</p>
@@ -128,7 +101,7 @@ export const Home = () => {
           <div>
             <h5>Proyecto Web - Gimnasio MetaBody</h5>
             <p>Desarrollé una landing page para un gimnasio, enfocándome en una presentación clara de sus servicios, beneficios y ubicación.
-               El diseño está pensado para ofrecer una navegación fluida y visualmente atractiva, guiando al usuario por secciones bien definidas con llamados a la acción visibles.
+              El diseño está pensado para ofrecer una navegación fluida y visualmente atractiva, guiando al usuario por secciones bien definidas con llamados a la acción visibles.
               La estética moderna y limpia ayuda a transmitir profesionalismo, mientras que la estructura responsive asegura una buena experiencia en distintos dispositivos. El proyecto fue desplegado en Netlify, garantizando un acceso rápido y sin complicaciones.</p>
             <div className={styles.tecnologias}>
               <p className={styles.tec}>HTML5</p>
@@ -136,6 +109,26 @@ export const Home = () => {
               <p className={styles.tec}>SCSS</p>
               <p className={styles.tec}>Netlify</p>
               <p className={styles.tec}>Bootstrap</p>
+            </div>
+          </div>
+        </a>
+
+        {/* --------------------------CALCULADORA------------------------------- */}
+        <a href="https://ubbee.github.io/calculadora/" target="_blank" className={styles.proyectos}>
+          <img src={calculadoraWeb} alt="captura de la web gimnacio MetaBody" />
+          <div>
+            <h5>Proyecto Web – Calculadora React</h5>
+            <p>Calculadora moderna desarrollada con React, JavaScript y SCSS, enfocada en rendimiento y UX. Implementé estado con useReducer, soporte de teclado
+              y números negativos (p. ej. 7 × -2), funciones unarias (x², x³, √, 1/x), memoria e historial persistente con localStorage. UI responsive,
+              animaciones sutiles y variables SCSS bilingües (ES+EN) para mantener un diseño limpio y escalable.</p>
+            <div className={styles.tecnologias}>
+              <p className={styles.tec}>React</p>
+              <p className={styles.tec}>JavaScript</p>
+              <p className={styles.tec}>SCSS</p>
+              <p className={styles.tec}>Vite</p>
+              <p className={styles.tec}>useReducer</p>
+              <p className={styles.tec}>LocalStorage</p>
+              <p className={styles.tec}>Responsive UI</p>
             </div>
           </div>
         </a>

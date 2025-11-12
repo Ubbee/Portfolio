@@ -1,6 +1,5 @@
 import styles from './formulario.module.css';
 import emailjs from 'emailjs-com';
-import { Nav } from '../Layout/Nav/Nav';
 
 export const Formulario = () => {
 
