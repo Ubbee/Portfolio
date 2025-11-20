@@ -15,37 +15,33 @@ export const Home = () => {
         <div>
           <h1 className={styles.titles}>SOBRE MI</h1>
         </div>
-        <p className={styles.home} >Comencé mi aventura en el desarrollo
-          web creando interfaces dinámicas y reactivas, buscando siempre ofrecer
-          experiencias fluidas en cualquier dispositivo. Desde entonces, he tenido
-          la oportunidad de contribuir a diversos proyectos{/*}, desde pequeñas landing
-          pages hasta aplicaciones más complejas*/}. <br /> Me enfoco en crear sitios web que
-          no solo se vean bien, sino que también estén optimizados bajo el capó,
-          ahorrando código para mejorar el rendimiento y la mantenibilidad.
+        <p className={styles.home} >Soy Front-End Developer especializado en React, JavaScript y desarrollo de interfaces
+          modernas, con formación Full Stack y experiencia real integrando APIs REST, manejando estado con React Hooks, y
+          construyendo UI escalables bajo arquitectura basada en componentes. Trabajo con HTML5, CSS3, SASS, Bootstrap,
+          Git/GitHub, Node.js, optimización de rendimiento y buenas prácticas de accesibilidad.
           <br /><br />
-          Actualmente, mi prioridad es diseñar y construir interfaces web reactivas,
-          centradas en la eficiencia y en la experiencia del usuario. Cuando no
-          estoy escribiendo código, me gusta explorar nuevas técnicas de desarrollo,
-          leer sobre tendencias tecnológicas y disfrutar de tiempo de calidad con
-          mis seres queridos</p>
+          Me enfoco en crear aplicaciones rápidas, limpias y mantenibles, utilizando herramientas y enfoques actuales como
+          Responsive Design, consumo de APIs, testing básico y flujos de trabajo ágiles (Scrum). Sigo perfeccionándome en
+          tecnologías del ecosistema moderno como TypeScript, Next.js y diseño orientado a performance, con el objetivo de
+          entregar soluciones cada vez más sólidas y profesionales.</p>
 
 
         {/* ----------------------SERVICIOS---------------------- */}
         <h2 className={styles.titles}>EXPERIENCIA</h2>
         <div className={styles.stitulo}>
           <a href="#" className={styles.exp} >
-            <p className={styles.fecha}>2024 -- PRESENT</p>
+            <p className={styles.fecha}>2024 -- 2025</p>
             <div>
-              <h4>Front-End Developer - Freelance</h4>
-              <p id='proyecto'>Creación y mantenimiento de páginas web altamente reactivas, garantizando una experiencia
-                de usuario fluida en dispositivos de diferente tamaño. Priorizo la eficiencia del
-                código, optimizando su estructura para reducir redundancias y mejorar el
-                rendimiento general del sitio, logrando soluciones limpias y escalables</p>
+              <h4>Front-End Developer – Libra </h4>
+              <p id='proyecto'>Implementación de la arquitectura frontend del sistema Libra con React, aplicando Hooks,
+                manejo de estados y diseño basado en componentes. Integración con backend mediante REST APIs, optimización
+                de rendimiento y desarrollo de interfaces responsivas orientadas a uso operativo intensivo.</p>
               <div className={styles.tecnologias}>
                 <p className={styles.tec}>JavaScript</p>
                 <p className={styles.tec}>React js</p>
                 <p className={styles.tec}>HTML5</p>
                 <p className={styles.tec}>CSS 3</p>
+                <p className={styles.tec}>API Integration</p>
               </div>
             </div>
           </a>
